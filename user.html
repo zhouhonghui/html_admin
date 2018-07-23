@@ -25,7 +25,7 @@
                 <th lay-data="{field:'classify'}">职业</th>
                 <th lay-data="{field:'wealth', sort: true}">财富</th>
                 <th lay-data="{field:'score', sort: true, fixed: 'right'}">评分</th>
-                <th lay-data="{fixed: 'right', align:'center', toolbar: '#barDemo'}"></th>
+                <th lay-data="{fixed: 'right',width: 170, align:'center', toolbar: '#barDemo'}"></th>
             </tr>
         </thead>
     </table>
@@ -64,7 +64,7 @@
                     getCheckData: function () { //获取选中数据
                         var checkStatus = table.checkStatus('idTest'),
                             data = checkStatus.data;
-                        layer.alert(JSON.stringify(data));
+                        parent.layer.alert(JSON.stringify(data));
                     },
                     getCheckLength: function () { //获取选中数目
                         var checkStatus = table.checkStatus('idTest'),

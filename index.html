@@ -39,7 +39,10 @@
                 <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
                 <ul class="layui-nav layui-nav-tree" lay-filter="test">
                     <li class="layui-nav-item layui-nav-itemed">
-                        <a class="" href="javascript:;">系统设置</a>
+                        <a class="" href="javascript:;">
+                            <i class="layui-icon layui-icon-set"></i>
+                            系统设置
+                        </a>
                         <dl class="layui-nav-child">
                             <dd>
                                 <a class="nav_a" href="javascript:;" data-herf="system.html">系统信息</a>
@@ -50,18 +53,24 @@
                         </dl>
                     </li>
                     <li class="layui-nav-item">
-                        <a href="javascript:;">用户管理</a>
+                        <a href="javascript:;">
+                            <i class="layui-icon layui-icon-user"></i>
+                            用户管理
+                        </a>
                         <dl class="layui-nav-child">
                             <dd>
                                 <a class="nav_a" href="javascript:;" data-herf="user.html">用户信息</a>
                             </dd>
                             <dd>
-                                <a class="nav_a" href="javascript:;" data-herf="system.html">增加用户</a>
+                                <a class="nav_a" href="javascript:;" data-herf="adduser.html">增加用户</a>
                             </dd>
                         </dl>
                     </li>
                     <li class="layui-nav-item">
-                        <a class="nav_a" href="javascript:;" data-herf="system.html">发布信息</a>
+                        <a class="nav_a" href="javascript:;" data-herf="system.html">
+                            <i class="layui-icon layui-icon-release"></i>
+                            发布信息
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -85,9 +94,10 @@
     <script src="layui/layui.js"></script>
     <script>
         //JavaScript代码区域
-        layui.use('element', function () {
+        layui.use(['element','form', 'layedit', 'laydate'], function () {
             var element = layui.element,
                 $ = layui.jquery,
+                layer = layui.layer,
                 h = $('.main-content').innerHeight() - $('.layui-tab-title').outerHeight() - 3;
                 $('.layadmin-iframe').outerHeight(h);
             // nav切换
