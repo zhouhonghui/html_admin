@@ -1,3 +1,9 @@
+body{
+    padding:10px;
+}
+.no-padding{
+    padding:0;
+}
 .main-content{
     bottom: 0!important;
 }
@@ -6,5 +12,7 @@
 }
 .layadmin-iframe{
     width: 100%;
-    height: 100%;
+}
+.nav-tab-box .layui-tab-content{
+    padding:0;
 }
